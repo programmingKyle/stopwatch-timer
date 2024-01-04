@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Timer</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div>
+      <div style="display:flex; justify-content: center;">
+        <button id="stopwatchTabButton" class="stopwatch-timer-tab" style="margin: 0px; flex: 0 0 auto; border-bottom-left-radius: 5px;">Stopwatch</button>
+        <button id="timerTabButton" class="stopwatch-timer-tab" style="margin: 0px; flex: 0 0 auto; border-bottom-right-radius: 5px;">Timer</button>
+      </div>
+    </div>
+
+    <div style="display: flex; justify-content: center; height: 30vh; align-items: center; margin-bottom: 10px;">
+      <div id="timerTextDiv" style="background-color: #252525; border-radius: 5px; width: 200px; padding: 10px 15px; display: none;">
+        <h1 style="width: 100%; text-align: center; display: none;" id="timerText">00:00:00:000</h1>
+      </div>
+
+      <div id='timerUserInputDiv' style="display: inline-block; justify-content: center; background-color: #252525; padding: 10px 15px; border-radius: 5px; margin-top: 10px; margin-bottom: 10px; width: 200px;">
+        <div class="horizontal-container">
+            <h6>Hours</h6>
+            <h6>Minutes</h6>
+            <h6>Seconds</h6>
+        </div>
+        <div class="horizontal-container">
+            <input class="timer-inputs" type="number" id="hours" min="0" max="23" value="0"/>
+            <input class="timer-inputs" type="number" id="minutes" min="0" max="59" value="0"/>
+            <input class="timer-inputs" type="number" id="seconds" min="0" max="59" value="0"/>
+        </div>
+        <div class="horizontal-container">
+          <div style="display: flex; justify-content: left; align-items: center;">
+            <input type="checkbox" id="foregroundDisplay">
+            <h6>Pop Up</h6>  
+          </div>
+          <div style="display: flex; justify-content: right; align-items: center;">
+            <input type="checkbox" id="playAlertSound">
+            <h6>Notification Sound</h6>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div id="preTimerContainer" style="display: flex; height: 30vh; justify-content: center; align-items: center; margin-left: 50px; margin-right: 50px;">
+      <div style="display: inline-block; justify-content: center; background-color: #252525; border-radius: 5px; height: 100%; margin-bottom: 10px; width: 100%;">
+        <div class="horizontal-container" style="height: 50%;">
+          <button id="preTimeButton" class="control-buttons" style="margin: 5px;">15 Minutes</button>
+          <button id="preTimeButton" class="control-buttons" style="margin: 5px;">30 Minutes</button>
+        </div>
+        <div class="horizontal-container" style="height: 50%">
+          <button id="preTimeButton" class="control-buttons" style="margin: 5px;">45 Minutes</button>
+          <button id="preTimeButton" class="control-buttons" style="margin: 5px;">1 Hour</button>
+        </div>
+      </div>
+    </div>
+    <div style="display: flex; height: 20vh; justify-content: center; align-items: center; margin-left: 50px; margin-right: 50px; margin-top: 10px;">
+      <div style="display: flex; justify-content: center; background-color: #252525; border-radius: 5px; height: 100%; padding: 5px; width: 100%;">
+        <button id="timerStartButton" class="control-buttons" style="display: inline-block;">Start</button>
+        <button id="timerResumeButton" class="control-buttons" style="display: none;">Resume</button>
+        <button id="timerPauseButton" class="control-buttons" style="display: none;">Pause</button>
+        <button id="timerResetButton" class="control-buttons" style="display: none;">Reset</button>  
+      </div>
+    </div>
+    <audio id="notificationAudioSource" src="files/notification.mp3" type="audio/mpeg"></audio>
+  </body>
+  <script src="timer.js"></script>
+</html>

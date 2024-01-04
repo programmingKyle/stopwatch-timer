@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div style="height: 5vh;">
+      <div style="display:flex; justify-content: center;">
+        <button id="stopwatchTabButton" class="stopwatch-timer-tab" style="margin: 0px; flex: 0 0 auto; border-bottom-left-radius: 5px;">Stopwatch</button>
+        <button id="timerTabButton" class="stopwatch-timer-tab" style="margin: 0px; flex: 0 0 auto; border-bottom-right-radius: 5px;">Timer</button>
+      </div>
+    </div>
+    <div style="height: 30vh; justify-content: center; align-items: center; display: flex;">
+      <div style="background-color: #252525; display: inline-block; padding: 10px 50px 10px 50px; border-radius: 5px;">
+        <h6>Overall Time</h6>
+        <h3 id="timeText">00:00:000</h3>
+        <h6>Lap Time</h6>
+        <h3 id="lapTimeText">00:00:000</h3>
+      </div>
+    </div>
+    <div class='horizontal-container' style="height: 10vh; margin-left: 20px; margin-right: 20px;">
+      <button id="startButton" class="control-buttons">Start</button>
+      <button id="resumeButton" class="control-buttons">Resume</button>
+      <button id="stopButton" class="control-buttons">Stop</button>
+      <button id="lapButton" class="control-buttons">Lap</button>
+      <button id="resetButton" class="control-buttons">Reset</button>
+    </div>
+    <div style="height: 55vh; margin-left: 25px; margin-right: 25px;">
+      <div class="horizontal-container" style="height: 15%; align-items: center;">
+        <h4 style="margin-left: 20px;">Lap #</h4>
+        <h4>Lap Time</h4>
+        <h4 style="margin-right: 20px;">Overall Time</h4>
+      </div>
+      <div id="lapTimes" class="scrollable" style="height: 85%;">
+
+      </div>
+    </div>
+  </body>
+  <script src="stopwatch.js"></script>
+</html>
