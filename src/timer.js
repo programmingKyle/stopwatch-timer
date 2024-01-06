@@ -25,7 +25,7 @@ const preTimerContainer_el = document.getElementById('preTimerContainer');
 const notificationAudioSource = document.getElementById('notificationAudioSource');
 const popupSetting_el = document.getElementById('foregroundDisplay');
 const playerAlertSoundSetting_el = document.getElementById('playAlertSound');
-notificationAudioSource.volume = 0.3;
+notificationAudioSource.volume = 0.1;
 
 
 preTimerButtons_el.forEach(button => {

@@ -35,7 +35,7 @@
             <h6>Pop Up</h6>  
           </div>
           <div style="display: flex; justify-content: right; align-items: center;">
-            <input type="checkbox" id="playAlertSound">
+            <input type="checkbox" id="playAlertSound" checked>
             <h6>Notification Sound</h6>
             </div>
         </div>
@@ -61,7 +61,8 @@
         <button id="timerResetButton" class="control-buttons" style="display: none;">Reset</button>  
       </div>
     </div>
-    <audio id="notificationAudioSource" src="files/notification.mp3" type="audio/mpeg"></audio>
+    <audio id="notificationAudioSource" src="files/notification.wav" type="audio/mpeg"></audio>
+    <!--Notification sound from mixkit (musical reveal): https://mixkit.co/free-sound-effects/notification/ -->
   </body>
   <script src="timer.js"></script>
 </html>
